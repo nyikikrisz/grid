@@ -1,6 +1,7 @@
 body{
     background: linear-gradient(45deg, oklch(27.17% 0.0537 156.09) 0.000% 20.000%, oklch(37.09% 0.0771 153.57) 20.000% 40.000%, oklch(48.38% 0.0999 152.66) 40.000% 60.000%, oklch(59.92% 0.1191 153.14) 60.000% 80.000%, oklch(70.47% 0.1337 153.98) 80.000% 100.000%);
     color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
     
 }
 .grid-layout{
@@ -18,20 +19,40 @@ body{
 header{
     grid-area: header;
     text-align: center;
+    height: 150px;
+    padding-top: auto;
+    padding-bottom: auto;
+    font-size: 30px;
 }
 .level{
     position: absolute;
-    height: 100px;
+    height: 190px;
     padding: 0px !important;
     border-radius: 20px;
 }
 aside{
     grid-area: aside;
+}
 
+
+aside li{
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: green
 }
 main{
     grid-area: main;
+    align-items: center;
+
 }
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
 footer{
     grid-area: footer;
 
@@ -42,7 +63,8 @@ footer{
     padding: 20px;
     box-shadow: 5px 50px 100px rgb(0, 0, 0);
     transition: 0.3s;
-    position: relative;
+    text-align: center;
+    align-items: center;
 }
 
 .elemek:hover{
@@ -52,13 +74,28 @@ footer{
 }
 
 
-@media (max-width: 860px){
+@media (max-width: 1102px){
     .grid-layout{
         grid-template-areas:
                     "header"
+                    "video"
                     "aside" 
                     "main"
                     "footer";
         grid-template-columns: 1fr
+}
+header{
+        font-size: 20px;
     }
+.level{
+    height: 1px;
+}
+}
+
+h1, h2, h3{
+    color: green
+}
+.kiegsz{
+    color: greenyellow;
+    font-style: italic;
 }
